@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JEPSO</title>
+        <style>
+            .logo{
+                border-style:solid;
+                border-width:0px;
+                border-color:#C00080;
+                border-top-width:8px;
+                width:166px;
+                float:right;
+                font-family:Helvetica;
+                margin:30px;
+            }
+            h1,b,h2,h3,h4,h5,h6{
+                color:#C00080;
+            }
+            .logo h1{
+                color:black;
+                margin-top:0px;
+                margin-bottom:0px;
+                font-size:50px;
+            }
+            .logo p{
+                margin:0;
+                font-size:13px;
+            }
+            .logo a{
+                color:black;
+                text-decoration:none;
+            }
+            b>a, h1>a{
+                color:#C00080;
+                text-decoration:none;
+            }
+            #body{
+                font-family:Helvetica;
+                max-width:800px;
+                margin-right:auto;
+                margin-left:auto;
+            }
+        </style>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-31798041-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </head>
+    <body>
+        <div class="logo">
+            <a href="http://www.jepso.com">
+            <h1>JEPSO</h1>
+            <p>Building the tools you need</p></a>
+        </div>
+        <div id="body">
+            
+            <h1><a href="http://www.jepso.com">JEPSO</a></h1>
+            
+            <p><b><a href="http://www.jepso.com">JEPSO</a></b> is a small but dedicated team of software developers and system administrators who work to build the tools you need.  We produce bespoke software, as well as great, general purpose tools.</p>
+            
+            <h2>Bespoke Software</h2>
+            
+            <p>Having bespoke software could help your business to be more productive by allowing you to focus on just what matters to you and by ensuring that the right people can get the right information at the right time.</p>
+            
+            <p><b><a id="contact">Talk to us</a></b> about our fully managed bespoke software support plans from as little as &pound;200/month.</p>
+            
+            <h2>Free Development for non-profit organisations</h2>
+            
+            <p><b><a href="http://www.jepso.com">JEPSO</a></b> have supported a number of non-profit organisatioins by developing and hosting free web based applications.  These provide a great opportunity for <b><a href="http://www.jepso.com">JEPSO</a></b> to give something back to the community, and to showcase the work we are so proud of.</p>
+            
+            <p><b>Shepperton Slalom Canoe Club</b> used to keep all their records on paper.  This made it difficult to keep track of who had paid the appropriate membership fees and signed the correct disclaimers.  It also made it impossible for them to compile lists of who had what qualifications or to produce statistics showing how well members were doing competitively.  <b><a href="http://www.jepso.com">JEPSO</a></b> revolutionised membership by providing a modern online database to store all membership information.  This can be easily kept up to date by members.  It allows coaches to access information on smart phones, as well as on desktop computers and makes it easy for the membership secretary to keep track of who has joined or left the club.</p>
+            
+            <p>The <b><a href="http://www.rcsa.co.uk/rooms">RCSA</a></b> (the student body for Robinson College at the University of Cambridge) had lots of separate systems for keeping track of both who had chosen what room, and descriptions/reviews of the various rooms.  This made it stressful for the person responsible for running the room ballot and difficult for students to make informed decisions about which room they want.  <b><a href="http://www.jepso.com">JEPSO</a></b> took all the information stored across the various systems and combined them into one unified database.  Having done this, we were able to create a modern, fast JavaScript front end.  We used the universities authentication system so that students don't need to remember an aditionial username or password.  We also added real-time capabilities, so that during the ballot students are always kept completely up to date as to which rooms are already taken vs. which rooms are still available.</p>
+            
+            <p>The <b><a href="http://www.rcsa.co.uk">RCSA</a></b> also had an old, outdated website running an old version of Drupal.  This old system was prone to frequent crashes and had confusing bugs when attempting to edit content.  This meant that all editing of content had to be performed by the administrator.  Security was an all or nothing affair, so it was not possible to restrict any content to university members only.  <b><a href="http://www.jepso.com">JEPSO</a></b> created a new website using the latest version of Drupal and creating a totally customised theme.  This not only updated the style of the website, but also offered speed improvements.  The new website is carefully configured to be highly modular and maintainable.  It uses the universities central authentication system so users don't need to learn a new username or password.  Permissions can be defined in a fine grained fassion so that each role within the committee is only given access to edit content relevant to them, making it imposible for non-admin users to break the website.  We also enforced consistent styling rules to provide the website with a consistent and professional image.</p>
+
+            <h2>Open Source</h2>
+
+            <p><b><a href="http://www.jepso.com">JEPSO</a></b> is keen to support open source software through the use of <b><a href="http://github.com/jepso">GitHub</a></b>.  We generally open source any software we feel will be useful to others but isn't, on it's own, comercially viable.  This includes everything from <b><a href="http://github.com/jepso/passport-photo">passport-photo</a></b> (a node.js module for retrieving user's profile pictures based on their e-mail or Facebook ID or whatever other info you have about them) to an efficient JavaScript Sudoku solving engine called <b><a href="http://www.jepso.com/sudu/example.html">SUDU</a></b></p>
+        </div>
+        
+        <script>
+            function mail(){
+                var alphabet = 
+                 'abcdefghijklmnopqrstuvwxyz@.';
+                var value = [
+                2,14,13,19,0,2,19,
+                26,//@
+                9,4,15,18,14,
+                27,2,14,12];
+
+                return value.map(function(val){return alphabet.substr(val,1);}).join("");
+            }
+            setTimeout(function(){
+                document.getElementById('contact').href = "mailto:"+mail()+"?subject=Software%20Enquiry";
+            },400);
+        </script>
+    </body>
+</html>
