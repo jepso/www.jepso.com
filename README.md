@@ -1,10 +1,7 @@
-jepso.com
-================
+# www.jepso.com
 
-Public website
+This is currently a static website, hosted on Amazon S3.
 
-www.jepso.com
+To run locally use `npm install` then `node server.js`.
 
-This is currently a static website, which saves money on hosting and is currently sufficient for our marketing needs.
-
-It is hosted on http://www.staticloud.com/ JEPSO is grateful for the free hosting.
+To deploy, create the file `.mandate.toml` and add the amazon configurations then run `npm run release`.
