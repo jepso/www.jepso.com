@@ -1,32 +1,34 @@
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
 var express = require('express');
-var server = express.createServer();
+var app = express();
 
-server.use(express.static(__dirname));
-/*
+app.set('views', path.join(__dirname, 'views'));
 
-server.use(function(req,res, next){
-	var url = require('url').parse(req.url);
-	if(!/\./g.test(url.pathname) && url.pathname.substr(url.pathname.length - 1, 1) !== "/"){
-		url.pathname += "/";
-		var newPath = url.pathname + (url.search||"");
-		res.redirect(newPath, 301);
-	} else {
-		next();
-	}
+function mangle(text) {
+  var out = '';
+
+  for (var i = 0; i < text.length; i++) {
+    var ch = text.charCodeAt(i);
+    if (Math.random() > 0.5) {
+      ch = 'x' + ch.toString(16);
+    }
+    out += '&#' + ch + ';';
+  }
+
+  return out;
+};
+
+app.use(function (req, res, next) {
+  var file = path.join(__dirname, 'views', req.path, 'index.jade');
+  fs.exists(file, function (exists) {
+    if (exists) return res.render(file, {mangle: mangle});
+    else return next();
+  });
 });
-server.use(function(req, res, next){
-	var url = require('url').parse(req.url);
-	if(/\./g.test(url.pathname)) return next();
-	var pathname = url.pathname + "index.html";
-	if(!(/^[\w\/]*\.\w*$/g.test(pathname))) return next(new Error(pathname + " is not a valid path name"));
-	require('path').exists(pathname, function(exists){
-		if (exists){
-			res.sendFile(pathname);
-		} else {
-			next();
-		}
-	})
-});
-*/
-var port = process.env.PORT || 8080;
-server.listen(port)
+app.use(express.static(__dirname));
+
+module.exports = app.listen(3000);
+console.log('server listening on http://localhost:3000');

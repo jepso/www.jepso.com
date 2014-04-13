@@ -1,0 +1,9 @@
+<svg style="overflow: hidden; position: relative; " height="130" version="1.1" width="150" xmlns="http://www.w3.org/2000/svg">
+  <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); ">JEPSO Logo</desc>
+  <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); "></defs>
+  <text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; font-family: Helvetica; font-size: 40px; " x="75" y="75" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" font-family="Helvetica" font-size="40px"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); " dy="13.5">JEPSO</tspan></text>
+  <text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; font-family: Helvetica; " x="75" y="105" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" font-family="Helvetica"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); " dy="3.5">Building the tools you need</tspan></text>
+  <path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#c00080"
+        d="M15,40 Q45,10 75,30 Q105,50 135,20"
+        stroke-width="4"></path>
+</svg>
