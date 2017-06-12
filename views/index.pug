@@ -1,0 +1,55 @@
+extends ./layout.pug
+
+block content
+  .title
+    img(src="/images/logo.svg")
+  .content
+    - var email = mangle('contact@jepso.com')
+
+    h1 What is Jepso?
+
+    p.
+      Jepso began trading in 2012.  It specialises in providing niche web applications for small and medium sized
+      businesses that need something a bit different from the plethora of products that flood the market.
+
+    p.
+      We develop, maintain and support cloud systems that solve your business need and are a pleasure to use.
+
+    h1 What have we worked on?
+
+    .example-projects
+      .example-project
+        p.
+          MAMG is a company that manages Public-Private-Partnership projects on behalf of key investors.  Projects
+          include all types of public buildings from hospitals to schools to custody centres.  Jepso was retained to
+          provide MAPS - a system to support the management of all their projects – in 2012.  The system was well
+          received at all levels; as well as helping managers to provide a good service, it has also facilitated
+          project handovers between employees ensuring that project knowledge was not lost.  MAPS continues to be
+          a key part of MAMG’s disaster recovery plans and of their Quality procedures for ?????(see David for ISO
+          references).
+      .example-project
+        p.
+          Canoe Slalom is an International Olympic sport.  The national sport in the UK runs ranking competitions,
+          at different levels, throughout the UK.  Until recently entries to national competitions have required
+          manually completed entry forms and cheques to be sent to organisers, who in turn collated and checked the
+          validity of each entry.  Jepso has provided an online entry system that replaces much of this process making
+          it easier for competitors to enter and to know that their entry has been received.  Entry and payment errors
+          have been significantly reduced and organisers’ work effort has been substantially reduced.
+    
+    h1 Who are we?
+
+    .people
+      .person
+        p.
+          Forbes Lindesay is a Cambridge Computer Science graduate who, as a technical specialist, develops software
+          used by other developers as well as business software.  He spent four years as an employee, including over two
+          years at Facebook gaining experience of operating large web-based systems, before leaving to concentrate on
+          growing Jepso full time.  He is regularly invited to speak at international software developer conferences and
+          has contributed to some of the industry’s key developments in recent years including the ES2016 Promises
+          Specification and Pug (a widely used templating language that combines JavaScript with HTML).
+      .person
+        p.
+          Dee Lindesay is a Maths graduate with over 20 years of experience in the IT industry as a Project Manager and
+          Business Analyst.  She has worked with many different databases and technologies and a wide range of
+          businesses from small privately owned companies to international banks.  Her focus is on delivering easy to
+          use systems that provide a real benefit to the business and end users. 

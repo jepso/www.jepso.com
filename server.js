@@ -22,7 +22,7 @@ function mangle(text) {
 };
 
 app.use(function (req, res, next) {
-  var file = path.join(__dirname, 'views', req.path, 'index.jade');
+  var file = path.join(__dirname, 'views', req.path, 'index.pug');
   fs.exists(file, function (exists) {
     if (exists) return res.render(file, {mangle: mangle});
     else return next();
