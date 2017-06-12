@@ -4,40 +4,7 @@ html
     meta(charset='utf-8')
     title JEPSO
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    style.
-      .title {
-        text-align: center;
-      }
-      .title img {
-        width: 80%;
-        max-width: 300px;
-      }
-      .content {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
-        max-width: 600px;
-      }
-      a {
-        color:#C00080;
-        text-decoration:none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      body {
-        font-family: arial;
-        border-top: 10px solid #C00080;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-      }
-      @media (min-width: 500px) {
-        .content {
-          text-align: justify;
-        }
-      }
+    link(rel="stylesheet" href=getStatic('styles.css'))
   body
     block content
     script.

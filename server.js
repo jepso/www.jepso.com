@@ -1,30 +1,30 @@
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var express = require('express');
-var app = express();
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const express = require('express');
+const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 
-function mangle(text) {
-  var out = '';
+function getHash(filename) {
+  return crypto.createHash('md5').update(fs.readFileSync(__dirname + '/static/' + filename)).digest('hex').substr(0, 5);
+}
+function getStatic(filename) {
+  return '/static/' + getHash(filename) + '/' + filename;
+}
 
-  for (var i = 0; i < text.length; i++) {
-    var ch = text.charCodeAt(i);
-    if (Math.random() > 0.5) {
-      ch = 'x' + ch.toString(16);
-    }
-    out += '&#' + ch + ';';
-  }
-
-  return out;
-};
+app.get('/static/:hash/:filename', (req, res, next) => {
+  const hash = getHash(req.params.filename);
+  if (hash !== req.params.hash) return next();
+  res.sendFile(__dirname + '/static/' + req.params.filename);
+});
 
 app.use(function (req, res, next) {
   var file = path.join(__dirname, 'views', req.path, 'index.pug');
   fs.exists(file, function (exists) {
-    if (exists) return res.render(file, {mangle: mangle});
+    if (exists) return res.render(file, {mangle, getStatic});
     else return next();
   });
 });

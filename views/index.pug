@@ -2,10 +2,8 @@ extends ./layout.pug
 
 block content
   .title
-    img(src="/images/logo.svg")
+    img(src=getStatic('logo.svg'))
   .content
-    - var email = mangle('contact@jepso.com')
-
     h1 What is Jepso?
 
     p.
@@ -19,6 +17,7 @@ block content
 
     .example-projects
       .example-project
+        img.project-screenshot(src=getStatic('screenshot-maps.png'))
         p.
           MAMG is a company that manages Public-Private-Partnership projects on behalf of key investors.  Projects
           include all types of public buildings from hospitals to schools to custody centres.  Jepso was retained to
@@ -28,6 +27,7 @@ block content
           a key part of MAMG’s disaster recovery plans and of their Quality procedures for ?????(see David for ISO
           references).
       .example-project
+        img.project-screenshot(src=getStatic('screenshot-canoeslalomentries.png'))
         p.
           Canoe Slalom is an International Olympic sport.  The national sport in the UK runs ranking competitions,
           at different levels, throughout the UK.  Until recently entries to national competitions have required
@@ -40,6 +40,7 @@ block content
 
     .people
       .person
+        img.photo(src=getStatic('forbes.jpg'))
         p.
           Forbes Lindesay is a Cambridge Computer Science graduate who, as a technical specialist, develops software
           used by other developers as well as business software.  He spent four years as an employee, including over two
@@ -48,8 +49,11 @@ block content
           has contributed to some of the industry’s key developments in recent years including the ES2016 Promises
           Specification and Pug (a widely used templating language that combines JavaScript with HTML).
       .person
+        img.photo(src=getStatic('forbes.jpg'))
         p.
           Dee Lindesay is a Maths graduate with over 20 years of experience in the IT industry as a Project Manager and
           Business Analyst.  She has worked with many different databases and technologies and a wide range of
           businesses from small privately owned companies to international banks.  Her focus is on delivering easy to
-          use systems that provide a real benefit to the business and end users. 
+          use systems that provide a real benefit to the business and end users.
+          
+    a.contact-btn(href="mailto:contact@jepso.com") Contact Us
