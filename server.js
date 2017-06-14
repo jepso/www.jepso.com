@@ -24,7 +24,7 @@ app.get('/static/:hash/:filename', (req, res, next) => {
 app.use(function (req, res, next) {
   var file = path.join(__dirname, 'views', req.path, 'index.pug');
   fs.exists(file, function (exists) {
-    if (exists) return res.render(file, {mangle, getStatic});
+    if (exists) return res.render(file, {getStatic});
     else return next();
   });
 });
