@@ -5,7 +5,7 @@
   "description": "The jepso website",
   "scripts": {
     "prerelease": "rimraf out",
-    "release": "node stop.js && mandate",
+    "release": "node stop.js",
     "postrelease": "rimraf out"
   },
   "repository": {
@@ -17,8 +17,8 @@
     "pug": "^2.0.0-rc.2"
   },
   "devDependencies": {
+    "s3": "^4.4.0",
     "stop": "~3.0.0-rc1",
-    "mandate": "~1.0.1",
     "rimraf": "~2.2.6"
   }
 }
