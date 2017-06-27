@@ -13,8 +13,8 @@
     "url": "https://github.com/jepso/www.jepso.com.git"
   },
   "dependencies": {
-    "express": "~4.0.0",
-    "jade": "~1.3.1"
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
   },
   "devDependencies": {
     "stop": "~3.0.0-rc1",
